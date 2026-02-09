@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --brand: #0f766e;
+  --muted: #475569;
+}
+
+body {
+  background: radial-gradient(circle at top left, #ecfeff 0%, #f8fafc 35%, #ffffff 100%);
+  color: var(--foreground);
+}
+
+main {
+  min-height: calc(100vh - 180px);
+}
