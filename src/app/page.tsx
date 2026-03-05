@@ -52,12 +52,14 @@ export default function HomePage() {
           </nav>
           <div className="flex items-center gap-3">
             <Link
+              aria-label="Open grant application portal"
               className="rounded-lg bg-sky-600 px-5 py-2 text-sm font-bold text-white transition hover:scale-[1.02]"
               href="/apply"
             >
               Apply for Support
             </Link>
             <Link
+              aria-label="Open donation page"
               className="rounded-lg border border-sky-200 bg-sky-50 px-5 py-2 text-sm font-bold text-sky-700 transition hover:bg-sky-100"
               href="/donate"
             >
@@ -83,12 +85,14 @@ export default function HomePage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
+                aria-label="Start grant application"
                 className="rounded-xl bg-sky-600 px-8 py-4 text-base font-extrabold text-white shadow-lg shadow-sky-300 transition hover:bg-sky-700"
                 href="/apply"
               >
                 Apply for Support
               </Link>
               <Link
+                aria-label="Learn about FemFuture governance and programs"
                 className="rounded-xl border border-slate-300 bg-white px-8 py-4 text-base font-extrabold text-slate-800 transition hover:bg-slate-50"
                 href="/about"
               >
@@ -101,6 +105,8 @@ export default function HomePage() {
                   <div
                     key={avatar}
                     className="h-10 w-10 rounded-full border-2 border-white bg-cover bg-center"
+                    role="img"
+                    aria-label="FemFuture community member"
                     style={{ backgroundImage: `url('${avatar}')` }}
                   />
                 ))}
@@ -115,6 +121,8 @@ export default function HomePage() {
             <div className="relative overflow-hidden rounded-2xl border-8 border-white shadow-2xl">
               <div
                 className="aspect-[4/3] w-full bg-cover bg-center"
+                role="img"
+                aria-label="Women in a modern laboratory workspace"
                 style={{
                   backgroundImage:
                     "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBjdOgrDay7bIP0O-Er_XXXA6Ar6OoRizyitNSqgPO5XhvRE5aHHDPL5-uVUv4JxNxUBwYaeERGprAwZpiRayPTcc7NKvwkE0A_M2lYhZNJc316zEzT_ntnePSFSt2TK5ctcXM3ay3Pvgiu9NDKBdALbI88pPvJRzCtNJ956NsBW5GAOdRtWrGdX2HuC0JoxJHcc50uR9432cFaVVbQxy_0_ZepMxJy20Ji2ArS3CBgTo9BKeVh5isLyhPFMoiBHnXtqFfu17KBZsZ5')"
