@@ -37,18 +37,18 @@ export default function HomePage() {
             <h1 className="text-xl font-extrabold tracking-tight">FemFuture</h1>
           </div>
           <nav className="hidden items-center gap-8 md:flex">
-            <Link className="text-sm font-semibold text-slate-700 hover:text-sky-600" href="/why">
+            <a className="text-sm font-semibold text-slate-700 hover:text-sky-600" href="#mission">
               Our Mission
-            </Link>
-            <Link className="text-sm font-semibold text-slate-700 hover:text-sky-600" href="/programs">
+            </a>
+            <a className="text-sm font-semibold text-slate-700 hover:text-sky-600" href="#grants">
               Grants
-            </Link>
-            <Link className="text-sm font-semibold text-slate-700 hover:text-sky-600" href="/partner">
+            </a>
+            <a className="text-sm font-semibold text-slate-700 hover:text-sky-600" href="#advocacy">
               Advocacy
-            </Link>
-            <Link className="text-sm font-semibold text-slate-700 hover:text-sky-600" href="/impact">
+            </a>
+            <a className="text-sm font-semibold text-slate-700 hover:text-sky-600" href="#impact">
               Impact
-            </Link>
+            </a>
           </nav>
           <div className="flex items-center gap-3">
             <Link
@@ -68,7 +68,7 @@ export default function HomePage() {
       </header>
 
       <main>
-        <section className="mx-auto grid w-full max-w-[1300px] grid-cols-1 gap-14 px-4 py-14 md:px-8 lg:grid-cols-2 lg:py-20">
+        <section id="mission" className="mx-auto grid w-full max-w-[1300px] grid-cols-1 gap-14 px-4 py-14 md:px-8 lg:grid-cols-2 lg:py-20">
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 rounded-full bg-sky-100 px-3 py-1 text-xs font-bold uppercase tracking-widest text-sky-700">
               <span className="material-symbols-outlined text-sm">verified_user</span>
@@ -124,7 +124,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="bg-white py-20">
+        <section id="grants" className="bg-white py-20">
           <div className="mx-auto max-w-[1200px] px-4 md:px-8">
             <div className="mb-14 text-center">
               <h3 className="text-3xl font-black tracking-tight md:text-4xl">Our Core Pillars</h3>
@@ -153,7 +153,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mx-auto grid w-full max-w-[1200px] grid-cols-1 items-center gap-16 px-4 py-20 md:px-8 lg:grid-cols-2">
+        <section id="impact" className="mx-auto grid w-full max-w-[1200px] grid-cols-1 items-center gap-16 px-4 py-20 md:px-8 lg:grid-cols-2">
           <div className="space-y-8">
             <h3 className="text-3xl font-black tracking-tight md:text-4xl">Measuring Impact</h3>
             <p className="text-lg leading-relaxed text-slate-600">
@@ -203,7 +203,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="bg-sky-600 px-4 py-16 text-center text-white">
+        <section id="advocacy" className="bg-sky-600 px-4 py-16 text-center text-white">
           <div className="mx-auto max-w-[800px] space-y-6">
             <h3 className="text-4xl font-black tracking-tight md:text-5xl">Ready to build your future?</h3>
             <p className="text-lg text-white/85 md:text-xl">
