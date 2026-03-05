@@ -92,8 +92,12 @@ export default function PartnerPortalPage() {
               <p className="mt-2 text-lg text-slate-600">Driving systemic change in fertility support across academic medicine.</p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <button className="rounded-xl border-2 border-slate-300 px-6 py-3 text-sm font-black text-slate-700">Download Policy Kit</button>
-              <button className="rounded-xl bg-sky-600 px-6 py-3 text-sm font-black text-white">Schedule Sync</button>
+              <button aria-label="Download partner policy adoption kit" className="rounded-xl border-2 border-slate-300 px-6 py-3 text-sm font-black text-slate-700">
+                Download Policy Kit
+              </button>
+              <button aria-label="Schedule partner advocacy sync meeting" className="rounded-xl bg-sky-600 px-6 py-3 text-sm font-black text-white">
+                Schedule Sync
+              </button>
             </div>
           </div>
 
@@ -209,7 +213,7 @@ export default function PartnerPortalPage() {
                 <span className="material-symbols-outlined text-sky-700">assignment_turned_in</span>
                 Next Steps Checklist
               </h3>
-              <div className="space-y-3">
+              <div aria-label="Policy adoption checklist" className="space-y-3">
                 {[
                   { task: "Draft Institutional Needs Assessment", done: true },
                   { task: "Map Stakeholder Governance Structure", done: true },
