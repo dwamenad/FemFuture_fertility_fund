@@ -91,7 +91,11 @@ export default function ApplicantDashboardPage() {
               { value: "3", label: "Status", done: false },
               { value: "4", label: "Documents", done: false }
             ].map((item, idx) => (
-              <div key={item.label} className="flex flex-col items-center gap-2">
+              <div
+                key={item.label}
+                aria-current={idx === 2 ? "step" : undefined}
+                className="flex flex-col items-center gap-2"
+              >
                 <div
                   className={`flex h-9 w-9 items-center justify-center rounded-full text-sm font-black ${
                     item.done ? "bg-sky-600 text-white" : idx === 2 ? "border-2 border-sky-600 text-sky-600" : "border border-slate-300 text-slate-400"
