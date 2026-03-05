@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Route } from "next";
 import { ReactNode } from "react";
 
 export function PortalShell({
@@ -16,7 +17,7 @@ export function PortalShell({
         <h1 className="mb-3 text-lg font-semibold">{title}</h1>
         <nav aria-label={`${title} navigation`} className="space-y-2">
           {links.map((link) => (
-            <Link key={link.href} href={link.href} className="block rounded-md px-3 py-2 text-sm hover:bg-slate-100">
+            <Link key={link.href} href={link.href as Route} className="block rounded-md px-3 py-2 text-sm hover:bg-slate-100">
               {link.label}
             </Link>
           ))}
