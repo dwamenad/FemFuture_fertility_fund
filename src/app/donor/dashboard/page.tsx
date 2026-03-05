@@ -85,7 +85,7 @@ export default function DonorDashboardPage() {
           <div className="rounded-2xl bg-slate-900 p-5 text-white">
             <h3 className="text-sm font-bold">Continue the Legacy</h3>
             <p className="mt-2 text-xs leading-relaxed text-slate-300">Your contributions supported 14 women in medicine this year.</p>
-            <button className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-teal-600 py-2.5 text-xs font-bold">
+            <button aria-label="Create a new donation" className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-teal-600 py-2.5 text-xs font-bold">
               <span className="material-symbols-outlined text-base">volunteer_activism</span>
               Give Again
             </button>
@@ -120,7 +120,7 @@ export default function DonorDashboardPage() {
             </div>
           </div>
 
-          <section>
+          <section aria-label="Success stories from funded applicants">
             <div className="mb-4 flex items-center justify-between">
               <h3 className="flex items-center gap-2 text-lg font-bold text-slate-900">
                 <span className="material-symbols-outlined text-teal-700">auto_awesome</span>
@@ -140,7 +140,7 @@ export default function DonorDashboardPage() {
             </div>
           </section>
 
-          <section className="grid grid-cols-1 gap-6 xl:grid-cols-3">
+          <section aria-label="Donation allocation and transparency data" className="grid grid-cols-1 gap-6 xl:grid-cols-3">
             <article className="space-y-6 rounded-2xl border border-slate-200 bg-white p-8 xl:col-span-2">
               <h3 className="text-lg font-bold">Donation Allocation</h3>
               <div className="space-y-4">
