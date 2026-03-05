@@ -105,10 +105,11 @@ export default function ReviewerDashboardPage() {
                       <label className="text-sm font-bold text-slate-700">{label}</label>
                       <span className="rounded bg-sky-100 px-2 py-1 text-xs font-black text-sky-700">Weight: {weight}</span>
                     </div>
-                    <div className="grid grid-cols-5 gap-2">
+                    <div aria-label={`${label} score selector`} className="grid grid-cols-5 gap-2">
                       {[1, 2, 3, 4, 5].map((score) => (
                         <button
                           key={`${label}-${score}`}
+                          aria-label={`Set ${label} score to ${score}`}
                           className={`rounded border py-2 text-sm font-bold transition ${
                             score === 4 ? "border-sky-600 bg-sky-50 text-sky-700" : "border-slate-200 text-slate-600 hover:border-sky-300"
                           }`}
