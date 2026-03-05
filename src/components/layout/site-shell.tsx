@@ -1,5 +1,9 @@
+"use client";
+
 import Link from "next/link";
-import { ReactNode } from "react";
+import type { Route } from "next";
+import type { ReactNode } from "react";
+import { usePathname } from "next/navigation";
 
 const nav = [
   { href: "/", label: "Public" },
@@ -10,6 +14,19 @@ const nav = [
 ];
 
 export function SiteShell({ children }: { children: ReactNode }) {
+  const pathname = usePathname();
+  const immersiveRoutes = new Set([
+    "/",
+    "/applicant/dashboard",
+    "/donor/dashboard",
+    "/reviewer/dashboard",
+    "/partner/portal"
+  ]);
+
+  if (immersiveRoutes.has(pathname)) {
+    return <>{children}</>;
+  }
+
   return (
     <div className="mx-auto flex min-h-screen max-w-7xl flex-col px-4 sm:px-6 lg:px-8">
       <header className="sticky top-0 z-20 mt-4 rounded-2xl border border-slate-200/70 bg-white/85 px-4 py-3 shadow-sm backdrop-blur">
@@ -21,7 +38,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
             {nav.map((item) => (
               <Link
                 key={item.href}
-                href={item.href}
+                href={item.href as Route}
                 className="rounded-md px-3 py-1.5 text-slate-700 transition hover:bg-slate-100"
               >
                 {item.label}
