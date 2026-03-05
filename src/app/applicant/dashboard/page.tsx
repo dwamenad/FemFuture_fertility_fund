@@ -109,16 +109,26 @@ export default function ApplicantDashboardPage() {
           <form className="space-y-7 rounded-2xl border border-slate-200 bg-slate-50 p-6">
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <div>
-                <label className="mb-2 block text-sm font-bold text-slate-700">Primary Institution</label>
-                <input className="w-full rounded-lg border-slate-300 bg-white px-4 py-3 text-sm" placeholder="Stanford University School of Medicine" />
+                <label className="mb-2 block text-sm font-bold text-slate-700" htmlFor="primaryInstitution">
+                  Primary Institution
+                </label>
+                <input
+                  id="primaryInstitution"
+                  className="w-full rounded-lg border-slate-300 bg-white px-4 py-3 text-sm"
+                  placeholder="Stanford University School of Medicine"
+                />
               </div>
               <div>
-                <label className="mb-2 block text-sm font-bold text-slate-700">Department</label>
-                <input className="w-full rounded-lg border-slate-300 bg-white px-4 py-3 text-sm" placeholder="Reproductive Endocrinology" />
+                <label className="mb-2 block text-sm font-bold text-slate-700" htmlFor="department">
+                  Department
+                </label>
+                <input id="department" className="w-full rounded-lg border-slate-300 bg-white px-4 py-3 text-sm" placeholder="Reproductive Endocrinology" />
               </div>
               <div>
-                <label className="mb-2 block text-sm font-bold text-slate-700">Current Academic Title</label>
-                <select className="w-full rounded-lg border-slate-300 bg-white px-4 py-3 text-sm">
+                <label className="mb-2 block text-sm font-bold text-slate-700" htmlFor="academicTitle">
+                  Current Academic Title
+                </label>
+                <select id="academicTitle" className="w-full rounded-lg border-slate-300 bg-white px-4 py-3 text-sm">
                   <option>PhD Candidate</option>
                   <option>Postdoctoral Fellow</option>
                   <option>Assistant Professor</option>
@@ -128,14 +138,19 @@ export default function ApplicantDashboardPage() {
                 </select>
               </div>
               <div>
-                <label className="mb-2 block text-sm font-bold text-slate-700">Years in Current Position</label>
-                <input className="w-full rounded-lg border-slate-300 bg-white px-4 py-3 text-sm" min={0} type="number" />
+                <label className="mb-2 block text-sm font-bold text-slate-700" htmlFor="yearsInPosition">
+                  Years in Current Position
+                </label>
+                <input id="yearsInPosition" className="w-full rounded-lg border-slate-300 bg-white px-4 py-3 text-sm" min={0} type="number" />
               </div>
             </div>
 
             <div>
-              <label className="mb-2 block text-sm font-bold text-slate-700">Describe your clinical or research focus</label>
+              <label className="mb-2 block text-sm font-bold text-slate-700" htmlFor="focusSummary">
+                Describe your clinical or research focus
+              </label>
               <textarea
+                id="focusSummary"
                 className="w-full rounded-lg border-slate-300 bg-white px-4 py-3 text-sm"
                 placeholder="Briefly explain your current work and its impact."
                 rows={4}
